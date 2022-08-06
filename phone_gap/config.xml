@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.moongate.cftest" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>CFTest</name>
+    <description>Simple test of a BreakOut Game</description>
+    <author email="info@moongate.com.ar" href="http://moongate.com.ar">Moongate</author>
+	<preference name="Orientation" value="landscape" />
+	<preference name="Fullscreen" value="true" />
+	<plugin spec="https://github.com/floatinghotpot/cordova-httpd.git#4304980" source="git" />
+	<plugin name="cordova-plugin-whitelist" spec="~1.3.1" />
+    <content src="index.html" />
+    <access origin="*" />
+	<access uri="*" subdomains="true" />
+	<allow-intent href="http://*/*" />
+	<allow-intent href="https://*/*" />
+	<allow-navigation href="http://*/*" />
+	<allow-navigation href="https://*/*" />
+</widget>

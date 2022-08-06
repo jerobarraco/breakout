@@ -1,0 +1,12 @@
+src/*
+assets/*
+docs/general design.md
+docs/set up.md
+phone_gap/config.xml
+phone_gap/www/index.html
+CFTest.iml
+Cftest.hxproj
+src_included_files.txt
+dorelease.py
+project.xml
+

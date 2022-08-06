@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Breakout" package="com.moongate.breakout" version="1.0.0" company="Jerónimo Barraco Mármol" />
+	<!-- allows window stretching
+	<window width="0" height="0" fps="60" if="html5" /> -->
+	<!--<window fullscreen="true" resizable="true" borderless="true" width = "800" height="600" vsync="false" fps="60"/>
+	<window background="#000000" fps="60" />
+	<window width="800" height="480" unless="mobile" />
+	<window orientation="landscape" vsync="true" antialiasing="0"  />
+	-->
+	<window background="#000000" fps="60" />
+	<!-- Originally designed to fit 640x480. But we keep the aspect ratio (which brings nostalgia) -->
+	<!-- specify the with and height on "defines" constants so we are able to read them on the code -->
+	<set name="windowWidth" value="400" />
+	<set name="windowHeight" value="300" />
+	<haxedef name="windowWidth" value="${windowWidth}" />
+	<haxedef name="windowHeight" value="${windowHeight}" />
+	<window width="${windowWidth}" height="${windowHeight}" />
+	<!-- for building on android (and maybe ios) we need to specify some special values
+	the orientation to force landscape (otherwise it will use portrait)
+	resizable: so it stretches the canvas to fit the screen without changing the internal resolution (like in html5)
+	and fullscreen: so it hides the controls and also to complete the canvas stretching effect -->
+	<window if="mobile" orientation="landscape" resizable="false" fullscreen="true"  />
+
+	<app main="Main" path="out" file="Breakout" />
+	
+	<source path="src" />
+
+	<!-- Used libraries -->
+	<haxelib name="openfl" />
+	<haxelib name="actuate" />
+	<haxelib name="spritesheet" />
+
+	<!-- Used assets paths -->
+	<assets path="assets" rename="assets" />
+
+	<!--
+	to generate a release .apk use the following line
+	<certificate path="/home/user/my.keystore" alias="alias" password="password" if="android" ></certificate>
+	-->
+
+	<!-- in case there's a problem on compiled languages this extends the info given -->
+	<haxedef name="HXCPP_STACK_LINE" />
+	<haxedef name="HXCPP_CHECK_POINTER" />
+</project>
